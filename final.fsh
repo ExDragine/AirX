@@ -4,13 +4,30 @@ varying vec4 texcoord;
 
 uniform sampler2D gcolor;
 
+void Vignette(inout vec3 color){
+	float dist = distance(texcoord.st,vec2(0.5)) * 2.0;
+	dist /= 1.5142f;
+	
+	dist = pow(dist,1.1f);
+
+	color.rgb *= 1.0f - dist;
+}
+
+vec3 convertToHDR(in vec3 color){
+	vec3 HDRImage;
+
+	vec3 overExposed = color * 1.2f;
+
+	vec3 underExposed = color / 2.0f;
+
+	HDRImage = mix(underExposed,overExposed,color);
+
+	return HDRImage;
+}
+
 void main(){
     vec3 color = texture2D(gcolor,texcoord.st).rgb;
-    color.rgb = mix(color.rgb, vec3(0.4), vec3(1.0));
-    #ifdef COLOR_BOOST
-    color.r = (color.r * 1.3) + (color.g + color.b) * (-0.1);
-    color.g = (color.g * 1.3) + (color.r + color.b) * (-0.1);
-    color.b = (color.b * 1.3) + (color.r + color.g) * (-0.1);
-    #end if
+	color = convertToHDR(color);
+	Vignette(color);
     gl_FragColor = vec4(color.rgb,1.0f);
 }
