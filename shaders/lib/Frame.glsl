@@ -21,6 +21,7 @@ uniform sampler2D gdepth;
 uniform sampler2D gdepthtex;
 uniform sampler2D depthtex0;
 uniform sampler2D depthtex1;
+uniform sampler2D depthtex2;
 uniform sampler2D noisetex;
 
 uniform sampler2D shadow;
@@ -52,7 +53,6 @@ uniform vec3 sunPosition;
 uniform vec3 moonPosition;
 uniform vec3 upPosition;
 uniform vec3 shadowLightPosition;
-uniform vec3 upVec;
 
 uniform vec3 cameraPosition;
 uniform vec3 previousCameraPosition;
