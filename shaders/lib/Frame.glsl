@@ -1,4 +1,4 @@
-/*---This file most build by Eplor---*/
+/*----This file most build by Eplor----*/
 /*-------------Sampler2D---------------*/
 uniform sampler2D composite;
 

@@ -8,7 +8,7 @@ uniform sampler2D gcolor;
 vec3 toTonemap(in vec3 color){
 	vec3 Tonemap;
 	vec3 overExposed = color * 1.0f;
-	vec3 underExposed = color / 1.8f;
+	vec3 underExposed = color / 1.7f;
 	Tonemap = mix(underExposed,overExposed,color);
 	return Tonemap;
 }
