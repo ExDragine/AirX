@@ -1,5 +1,11 @@
 # AirX
 AirX, A simple GLSL project.Designed for the simplest but most basic shader architecture.
 
-## 简介
-删繁从简,并不是我们希望的目标,我们希望的是能以简单但是不简陋的事物架构一个令人满意的基础.AirX设计之初本为了最简单的Minecraft着色器的架构.
+## Introduction
+The deletion of simplicity is not the goal we want, we want to be able to structure a satisfactory foundation with simple but not rudimentary things. The AirX design was first designed for the simplest Minecraft shader architecture.The simplest definition is based on the most powerful OpenGL language. We used our own ideas to create a Linux-like kernel.
+
+##How to use?
+Just fork it.
+
+##Connet to me
+Twitter:ExDragine
