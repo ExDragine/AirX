@@ -1,8 +1,5 @@
-
+/*---This file most build by Eplor---*/
 /*-------------Sampler2D---------------*/
-uniform sampler2D gcolor;
-uniform sampler2D gnormal;
-uniform sampler2D gdepth;
 uniform sampler2D composite;
 
 uniform sampler2D colortex0;
@@ -21,6 +18,7 @@ uniform sampler2D gcolor;
 uniform sampler2D gnormal;
 uniform sampler2D gdepth;
 
+uniform sampler2D gdepthtex;
 uniform sampler2D depthtex0;
 uniform sampler2D depthtex1;
 uniform sampler2D noisetex;
@@ -37,6 +35,7 @@ uniform float far;
 uniform float near;
 uniform float viewWidth;
 uniform float viewHeight;
+uniform float aspectRatio;
 
 uniform float wetness;
 uniform float rainStrength;
@@ -50,6 +49,8 @@ uniform ivec2 eyeBrightnessSmooth;
 uniform ivec2 eyeBrightness;
 
 uniform vec3 sunPosition;
+uniform vec3 moonPosition;
+uniform vec3 upPosition;
 uniform vec3 shadowLightPosition;
 uniform vec3 upVec;
 
@@ -58,6 +59,8 @@ uniform vec3 previousCameraPosition;
 /*-------------------------------------*/
 
 /*-----------------Int-----------------*/
+uniform int moonPhase;
+
 uniform int frameTime;
 uniform int frameCounter;
 /*-------------------------------------*/
@@ -77,7 +80,6 @@ uniform mat4 gbufferProjectionInverse;
 /*----------------Bool-----------------*/
 uniform bool isEyeInWater;
 /*-------------------------------------*/
-
 
 const int RGBA16 = 1;
 const int gcolorFormat = RGBA16;
