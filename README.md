@@ -15,7 +15,7 @@ GLSL VERSION 120<br>
 MY BRAIN<br>
 
 ## How to use?
-Just fork it.Then begin what you want to do.
+Just fork it.Then begin what you want to do. Remember not to violate GPLv3!
 
 ## Connet to me
 Twitter:ExDragine<br>
