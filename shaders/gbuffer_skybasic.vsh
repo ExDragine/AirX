@@ -1,8 +1,9 @@
 #version 120
+#extension GL_EXT_gpu_shader4:enable
 
-varying vec3 tintColor;
+//////////////////////////////VOID MAIN//////////////////////////////
 
 void main(){
-    gl_Position = ftransform();
-    tintColor = gl_Color.rgb;
+    
+    gl_Position=ftransform();
 }
